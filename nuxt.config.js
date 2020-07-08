@@ -3,7 +3,7 @@
 export default {
   env: {
     wordpressdata: "https://www.wordpress.com"
-    
+
   },
   mode: 'universal',
   /*
@@ -47,6 +47,10 @@ export default {
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    'nuxt-buefy',
+
+        // Or you can customize
+        ['nuxt-buefy', { css: false, materialDesignIcons: false }],
   ],
   /*
   ** Axios module configuration
@@ -56,8 +60,11 @@ export default {
   },
   router: {
     // middleware: 'redirect'
-    middleware: 'redirect'
+    middleware: 'authenticated'
   },
+  // serverMiddleware: [
+  //   '~/serverMiddleware/redirect.js'
+  // ],
   /*
   ** Build configuration
   */
@@ -65,7 +72,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   }
 }

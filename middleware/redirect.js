@@ -1,6 +1,6 @@
 const redirects = require('../data/redirects.json') // update to your file path
 
-export default function ({ route, redirect }) {
+export default function ({ route, redirect, next }) {
     // find the redirect if it exists where the from === the requested url
     var r = redirects.find(r => r.from === route.fullPath)
 

@@ -6,8 +6,8 @@
       <nuxt-link to="/">
         <h1 class="subtitle">homepage</h1>
       </nuxt-link>
-      <nuxt-link to="/google">
-        <h1 class="subtitle">redirect to google</h1>
+      <nuxt-link to="/api/">
+        <h1 class="subtitle">redirect to api test</h1>
       </nuxt-link>
       
     </div>
